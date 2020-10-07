@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
     <title>Making Blonde, Saalon</title>
-    <script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
 
     <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
@@ -20,7 +19,7 @@
     <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
     <script custom-element="amp-inline-gallery" src="https://cdn.ampproject.org/v0/amp-inline-gallery-0.1.js" async></script>
     <script custom-element="amp-base-carousel" src="https://cdn.ampproject.org/v0/amp-base-carousel-0.1.js" async></script>
-
+    <script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
 
 
     <script type="application/ld+json">
@@ -1843,47 +1842,46 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 </button>
             </amp-base-carousel>
         </amp-inline-gallery>
-        <amp-script src="js/header.js">
-            <nav class="menu-header hx hs">
-                <div class="center-nav container">
-                    <ul class="logo-nav">
-                        <li>
-                            <a href="#">
-                                <amp-img src="img/logo-blonde.png" width="150" height="47" layout="fixed" alt="a sample image"></amp-img>
-                            </a>
-                        </li>
-                    </ul>
-                    <ul>
 
-                        <li>
-                            <a href="#">
+        <nav class="menu-header hx hs">
+            <div class="center-nav container">
+                <ul class="logo-nav">
+                    <li>
+                        <a href="#">
+                            <amp-img src="img/logo-blonde.png" width="150" height="47" layout="fixed" alt="a sample image"></amp-img>
+                        </a>
+                    </li>
+                </ul>
+                <ul>
+
+                    <li>
+                        <a href="#">
                         INICIO
                     </a>
-                        </li>
-                        <li>
-                            <a href="#">
+                    </li>
+                    <li>
+                        <a href="#">
                         SERVICIOS
                     </a>
-                        </li>
-                        <li>
-                            <a href="#">
+                    </li>
+                    <li>
+                        <a href="#">
                         NUESTRO TRABAJO
                     </a>
-                        </li>
-                        <li>
-                            <a href="#">
+                    </li>
+                    <li>
+                        <a href="#">
                         NOSOTROS
                     </a>
-                        </li>
-                        <li>
-                            <a href="#">
+                    </li>
+                    <li>
+                        <a href="#">
                         CONTÁCTENOS
                     </a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </amp-script>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </div>
     <aside id="desktop-sidebar"></aside>
     <main class="rw" style="flex-direction: column;">
@@ -2061,6 +2059,26 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             </div>
         </div>
     </footer>
+    <script amp-script>
+        var nystories = document.querySelectorAll("main")[0];
+        var navMenu = document.querySelectorAll(".menu-header")[0];
+        var slider = document.querySelectorAll(".mascara-slider")[0]
+        window.onscroll = function() {
+            if (window.pageYOffset > 0) {
+                //console.log(window.pageYOffset / nystories.offsetTop)
+                var opac = window.pageYOffset / nystories.offsetTop;
+                //console.log(opac)
+                navMenu.style.background = "rgba(41, 15, 38, " + opac + ")"
+                slider.style.background = "rgba(41, 15, 38, " + opac + ")";
+                if (window.pageYOffset > nystories.offsetTop - 80) {
+                    navMenu.classList.add('fixed-menu');
+                } else {
+                    navMenu.classList.remove('fixed-menu')
+                }
+            }
+        }
+    </script>
+
 </body>
 
 </html>
