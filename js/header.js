@@ -1,6 +1,6 @@
-var nystories = document.querySelectorAll("main")[0];
-var navMenu = document.querySelectorAll(".menu-header")[0];
-var slider = document.querySelectorAll(".mascara-slider")[0]
+var nystories = document.body.querySelectorAll("main")[0];
+var navMenu = document.body.querySelectorAll(".menu-header")[0];
+var slider = document.body.querySelectorAll(".mascara-slider")[0]
 window.onscroll = function() {
     if (window.pageYOffset > 0) {
         //console.log(window.pageYOffset / nystories.offsetTop)
