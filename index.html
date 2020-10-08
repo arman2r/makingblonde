@@ -500,7 +500,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         }
         /* Small screens only */
         
-        @media (min-width:600px) and (max-width:898px) {
+        @media (min-width:600px) and (max-width:899px) {
             .hs {
                 display: none
             }
@@ -1234,16 +1234,17 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         }
         
         .hamburger {
-            font-size: 2em;
-            display: block;
+            font-size: 1.5em;
             cursor: pointer;
-            position: absolute;
-            top: 13px;
-            right: 0;
             width: 40px;
             height: 40px;
             z-index: 1;
-            border: none
+            border: none;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 0 9px;
+            box-sizing: border-box
         }
         
         button:focus {
@@ -1294,19 +1295,53 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             display: none;
         }
         
+        .full-sidebar {
+            max-width: 100vw;
+            background: rgba(41, 15, 38, 1);
+            background-image: url(img/foto1.png);
+            background-size: cover;
+            background-position: -90%;
+        }
+        
+        .full-sidebar::before {
+            content: '';
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: rgba(41, 15, 38, .85);
+            z-index: 0;
+        }
+        
+        .full-sidebar nav {
+            max-height: calc(100vh - 140px);
+            overflow: auto;
+            position: relative;
+            z-index: 10;
+        }
+        
         ul.nav-container {
             display: block;
-            padding: 0;
-            background: #4CAF50;
+            padding: 10px 0;
             margin: 0px;
-            width: 300px;
+            width: 100vw;
         }
         
         ul.nav-container>* {
-            height: 100px;
             display: block;
-            border-bottom: 1px solid #EEE;
-            padding: 2px;
+            padding: 10px;
+            text-align: center;
+            color: #fff
+        }
+        
+        .toolbar-social {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            width: max-content;
+            margin: auto
         }
         
         .selected {
@@ -1749,16 +1784,29 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 white-space: nowrap;
                 margin: 0 0;
             }
+            header {
+                position: relative;
+                min-height: 67px;
+            }
+            header .menu-brand {
+                position: fixed;
+                left: 0;
+                top: 0;
+                width: 100%;
+                padding: 0 10px;
+                min-height: 67px;
+                box-sizing: border-box;
+                background-color: #fff;
+                display: flex;
+                align-items: center center;
+            }
         }
         
         @media (min-width: 767px) {
             /* overflow: scroll MUST BE on the `toolbar` */
             nav[toolbar] {
-                max-height: calc(100vh - 100px);
+                /*max-height: calc(100vh - 100px);*/
                 overflow: auto;
-            }
-            .hamburger {
-                display: none;
             }
             main {
                 display: flex;
@@ -1768,34 +1816,66 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 flex: 1
             }
         }
+        
+        @media(min-width:900px) {
+            .hamburger {
+                display: none;
+            }
+        }
     </style>
 
 </head>
 
 <body>
 
-    <amp-sidebar id="sidebar" layout="nodisplay">
+    <amp-sidebar class="full-sidebar" id="sidebar" layout="nodisplay">
+        <div class="container">
+            <div class="rw" style="padding-right: 10px;">
+                <button class="hamburger" style="float:right;margin:15px 0" on='tap:sidebar.toggle' aria-label="Click to open sidebar">
+                    <i class="fas fa-times" style="width: 30px"></i>
+                </button>
+            </div>
+        </div>
         <nav toolbar="(min-width: 767px)" toolbar-target="desktop-sidebar">
+            <div class="rw" style="align-items: center;display: flex;width:100%;padding: 20px 0 20px;">
+                <amp-img style="margin:auto" src="img/logo-making.png" layout="fixed" width="140" height="91" alt="making blonde"></amp-img>
+            </div>
             <ul class="nav-container">
-                <li>Nav item</li>
-                <li>Nav item</li>
-                <li>Nav item</li>
-                <li>Nav item</li>
-                <li>Nav item</li>
+                <li>INICIO</li>
+                <li>SERVICIOS</li>
+                <li>NUESTROS TRABAJO</li>
+                <li>NOSOTROS</li>
+                <li>CONTACTENOS</li>
             </ul>
         </nav>
+        <div class="social-footer toolbar-social">
+            <div class="rcx12 rcm4 social-footer">
+                <a href="#">
+                    <amp-img src="img/facebook.png" layout="fixed" width="30" height="30" alt="making blonde"></amp-img>
+                </a>
+                <a href="#">
+                    <amp-img src="img/whatsapp.png" layout="fixed" width="30" height="30" alt="making blonde"></amp-img>
+                </a>
+                <a href="#">
+                    <amp-img src="img/instagram.png" layout="fixed" width="30" height="30" alt="making blonde"></amp-img>
+                </a>
+            </div>
+        </div>
     </amp-sidebar>
 
     <header>
-        <div class="container content-logo center-text">
-            <span class="divider hx hs"></span>
-            <amp-img src="img/logo-making.png" class="hx hs" layout="fixed" width="140" height="91" alt="making blonde"></amp-img>
-            <amp-img src="img/logo-blonde.png" class="hm hl" layout="fixed" width="150" height="47" alt="making blonde"></amp-img>
-            <span class="divider"></span>
+        <div class="menu-brand">
+            <div class="container content-logo center-text">
+                <span class="divider hx hs"></span>
+                <amp-img src="img/logo-making.png" class="hx hs" layout="fixed" width="140" height="91" alt="making blonde"></amp-img>
+                <amp-img src="img/logo-blonde.png" class="hm hl" layout="fixed" width="150" height="47" alt="making blonde"></amp-img>
+                <span class="divider"></span>
+                <button class="hamburger" on='tap:sidebar.toggle' aria-label="Click to open sidebar">
+                    <i class="fas fa-bars"></i>
+            </button>
+            </div>
+
         </div>
-        <button class="hamburger" on='tap:sidebar.toggle' aria-label="Click to open sidebar">
-          =
-        </button>
     </header>
     <div class="wrapper-carousel">
         <!-- ## Autoplay -->
