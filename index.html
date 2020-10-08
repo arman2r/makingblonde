@@ -1300,7 +1300,8 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             background: rgba(41, 15, 38, 1);
             background-image: url(img/foto1.png);
             background-size: cover;
-            background-position: -90%;
+            background-position: 0%;
+            background-repeat: no-repeat;
         }
         
         .full-sidebar::before {
@@ -1799,6 +1800,15 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 background-color: #fff;
                 display: flex;
                 align-items: center center;
+            }
+            .full-sidebar {
+                background-position: 50%;
+            }
+        }
+        
+        @media(max-width:599px) {
+            .full-sidebar {
+                background-position: 60%;
             }
         }
         
