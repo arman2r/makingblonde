@@ -1460,6 +1460,11 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             opacity: 1;
         }
         
+        .menu-header ul li a.active::before {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
         nav.title {
             width: 100%;
             position: relative;
@@ -1627,6 +1632,14 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             padding: 0 0;
             position: relative;
             overflow: hidden;
+            min-height: 300px;
+        }
+        
+        @media(max-width:599px) {
+            .card-service {
+                min-height: 200px;
+                padding-bottom: 20px;
+            }
         }
         
         .card-service amp-image {
@@ -1909,6 +1922,9 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         }
         
         @media (max-width:899px) {
+            .banner-services {
+                position: relative;
+            }
             .banner-services .content-text {
                 padding: 0 0
             }
@@ -1938,7 +1954,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 <amp-img style="margin:auto" src="img/logo-making.png" layout="fixed" width="140" height="91" alt="making blonde"></amp-img>
             </div>
             <ul class="nav-container">
-                <li><a href="./">INICIO</a></li>
+                <li><a href="index.html">INICIO</a></li>
                 <li><a href="servicios.html">SERVICIOS</a></li>
                 <li>
                     <a href="nuestro-trabajo.html"></a>NUESTROS TRABAJO</a>
@@ -2000,12 +2016,12 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 <ul>
 
                     <li>
-                        <a href="./">
+                        <a href="index.html">
                         INICIO
                     </a>
                     </li>
                     <li>
-                        <a href="servicios.html">
+                        <a class="active" href="servicios.html">
                         SERVICIOS
                     </a>
                     </li>
@@ -2033,48 +2049,48 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         <br><br>
         <div class="rr">
             <div class="rcx12 card-service bg-purple">
-                <amp-img src="img/servicios/enjuague.png" width="1.5" height="0.4" layout="responsive" alt="a sample image"></amp-img>
+                <amp-img src="img/servicios/enjuague.png" width="1.8" height="0.5" layout="responsive" alt="a sample image"></amp-img>
                 <div class="banner-services">
                     <div class="content-text">
                         <div class="rcx12 rcm6">
-                            <h3>MEDIA COLA CON RISOS</h3>
-                            <p>Un estilo ideal para cumpleaños, bodas y eventos especiales</p>
+                            <h3>TRATAMIENTOS CAPILARES</h3>
+                            <p>En Making Blonde encuentras la mejor asesoría y selección de productos para el cuidado de su cabello.</p>
                             <a href="#" class="btn"><span>Ver todos <i class="fas fa-chevron-right"></i></span></a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="rcx12 card-service bg-pink">
-                <amp-img src="img/servicios/tinte.png" width="1.5" height="0.4" layout="responsive" alt="a sample image"></amp-img>
+                <amp-img src="img/servicios/tinte.png" width="1.8" height="0.5" layout="responsive" alt="a sample image"></amp-img>
                 <div class="banner-services">
                     <div class="content-text">
                         <div class="rcx12 rom6 rcm6">
-                            <h3>MEDIA COLA CON RISOS</h3>
-                            <p>Un estilo ideal para cumpleaños, bodas y eventos especiales</p>
+                            <h3>CORTE Y COLOR</h3>
+                            <p>en Making Blonde somos especialistas en resaltar la belleza y cuidado de su cabello.</p>
                             <a href="#" class="btn"><span>Ver todos <i class="fas fa-chevron-right"></i></span></a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="rcx12 card-service  bg-purple">
-                <amp-img src="img/servicios/arreglo-manos-y-pies.png" width="1.5" height="0.4" layout="responsive" alt="a sample image"></amp-img>
+                <amp-img src="img/servicios/arreglo-manos-y-pies.png" width="1.8" height="0.5" layout="responsive" alt="a sample image"></amp-img>
                 <div class="banner-services">
                     <div class="content-text">
                         <div class="rcx12 rcm6">
-                            <h3>MEDIA COLA CON RISOS</h3>
-                            <p>Un estilo ideal para cumpleaños, bodas y eventos especiales</p>
+                            <h3>ARREGLO UÑAS</h3>
+                            <p>Making Blonde te ofrece variedad y estilo en el arreglo y cuidado de tus uñas, manos y píes.</p>
                             <a href="#" class="btn"><span>Ver todos <i class="fas fa-chevron-right"></i></span></a>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="rcx12 card-service bg-pink">
-                <amp-img src="img/servicios/maquillaje-profesional.png" width="1.5" height="0.4" layout="responsive" alt="a sample image"></amp-img>
+                <amp-img src="img/servicios/maquillaje-profesional.png" width="1.8" height="0.5" layout="responsive" alt="a sample image"></amp-img>
                 <div class="banner-services">
                     <div class="content-text">
                         <div class="rcx12 rom6 rcm6">
-                            <h3>MEDIA COLA CON RISOS</h3>
-                            <p>Un estilo ideal para cumpleaños, bodas y eventos especiales</p>
+                            <h3>MAQULLAJE</h3>
+                            <p>Making Blonde cuenta con los mejores productos y manos profesionales para el buen trato de su piel.</p>
                             <a href="#" class="btn"><span>Ver todos <i class="fas fa-chevron-right"></i></span></a>
                         </div>
                     </div>

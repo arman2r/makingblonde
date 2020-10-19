@@ -1426,6 +1426,11 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             opacity: 1;
         }
         
+        .menu-header ul li a.active::before {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
         nav.title {
             width: 100%;
             position: relative;
@@ -1852,7 +1857,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 <amp-img style="margin:auto" src="img/logo-making.png" layout="fixed" width="140" height="91" alt="making blonde"></amp-img>
             </div>
             <ul class="nav-container">
-                <li><a href="./">INICIO</a></li>
+                <li><a href="index.html">INICIO</a></li>
                 <li><a href="servicios.html">SERVICIOS</a></li>
                 <li>
                     <a href="nuestro-trabajo.html"></a>NUESTROS TRABAJO</a>
@@ -1952,7 +1957,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 <ul>
 
                     <li>
-                        <a href="./">
+                        <a class="active" href="index.html">
                         INICIO
                     </a>
                     </li>
