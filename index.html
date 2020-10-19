@@ -1670,7 +1670,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         .form-style form {
             padding: 0px 0 10px;
             display: flex;
-            flex-flow: row nowrap;
+            flex-flow: column;
             align-items: stretch;
         }
         
@@ -1688,7 +1688,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         
         .form-style form button[type=submit] {
             border: none;
-            margin: 0 0 0 -4px;
+            margin: 0 0 0 -5px;
             padding: 10px;
             box-sizing: border-box;
             border-top-right-radius: 20px;
@@ -2087,16 +2087,21 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                     <div class="rcx12 rcm6 rcl3 form-style">
                         <h5>SUSCRIBETE A NUESTRO BOLETÍN</h5>
 
-                        <form class="sample-form" method="post" target="_top" custom-validation-reporting="as-you-go" action-xhr="https://example.com/subscribe">
-                            <input type="email" id="as-you-go-email" name="email" placeholder="Email..." required>
-                            <span visible-when-invalid="valueMissing" validation-for="as-you-go-email"></span>
-                            <span visible-when-invalid="typeMismatch" validation-for="as-you-go-email"></span>
-                            <button type="submit"><i class="fas fa-chevron-right"></i></button>
-                            <div submit-success>
-                                Success!
+                        <form id="subscribe" class="sample-form" action="" method="post" custom-validation-reporting="as-you-go">
+                            <div>
+                                <input type="email" id="email" name="email" placeholder="Email..." required>
+                                <button id="sendSubscribe" type="submit"><i class="fas fa-chevron-right"></i></button>
                             </div>
-                            <div submit-error>
-                                Error!
+                            <div>
+                                <span visible-when-invalid="valueMissing" validation-for="email"></span>
+                                <span visible-when-invalid="typeMismatch" validation-for="email"></span>
+
+                                <div submit-success>
+                                    Success!
+                                </div>
+                                <div submit-error>
+                                    Error!
+                                </div>
                             </div>
                         </form>
                     </div>
@@ -2168,7 +2173,38 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             }
         }
     </script>
+    <script>
+        var formSubscribe = document.querySelector('#subscribe');
+        var button = document.querySelector('#sendSubscribe');
+        var email = document.querySelector('#email');
+        formSubscribe.addEventListener("submit", onFormSubmit, false);
 
+        function onFormSubmit(e) {
+            e.preventDefault();
+            button.disabled = true;
+            var xhr = new XMLHttpRequest();
+            console.log({
+                "email": email.value
+            })
+            xhr.onload = function() {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    var response = JSON.parse(xhr.response);
+                    console.log(response)
+                    if (response['AlreadyInUse'] == true) {
+                        button.disabled = false;
+                        alert('Este email ya está en uso');
+                    } else {
+                        formSubscribe.submit();
+                    }
+                } else {
+                    alert('La solicitud fallo!');
+                }
+            };
+            //xhr.open('POST', 'https://somedomain.com/subscriptions?email=' + {"email": email.value});
+            //xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            //xhr.send();
+        }
+    </script>
 </body>
 
 </html>
