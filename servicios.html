@@ -955,6 +955,40 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         .wrapper-carousel {
             background-color: rgba(41, 15, 38, .5);
             position: relative;
+            max-height: 300px;
+            overflow: hidden;
+        }
+        
+        .wrapper-carousel::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #290F26;
+            opacity: .6;
+            z-index: 1;
+        }
+        
+        .title-banner {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            align-items: center;
+            display: flex;
+        }
+        
+        .title-banner h1 {
+            font-size: 1.5rem;
+            display: flex;
+            flex: 100%;
+            justify-content: center;
+            color: #C0AE80;
+            position: relative;
+            z-index: 1;
         }
         
         @media(min-width:600px) {
@@ -1527,6 +1561,17 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             transform-origin: center;
         }
         
+        .btn-large {
+            padding: 15px 55px;
+            box-sizing: border-box;
+            text-transform: uppercase;
+        }
+        
+        .btn-large::before {
+            width: 250px;
+            height: 250px;
+        }
+        
         .btn:hover {
             color: #fff
         }
@@ -1833,6 +1878,47 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 display: none;
             }
         }
+        
+        .banner-services {
+            position: absolute;
+            display: flex;
+            height: 100%;
+            width: 100%;
+            flex-flow: row;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: start;
+            text-align: left;
+            top: 0;
+            left: 0;
+        }
+        
+        .banner-services .content-text {
+            flex: 100%;
+            padding: 0 40px;
+            box-sizing: border-box;
+            color: #fff
+        }
+        
+        .banner-services .content-text div h3 {
+            margin: 0px 0 10px
+        }
+        
+        .banner-services .content-text div p {
+            margin: 10px 0
+        }
+        
+        @media (max-width:899px) {
+            .banner-services .content-text {
+                padding: 0 0
+            }
+            .banner-services .content-text h3 {
+                font-size: 1.2rem;
+            }
+            .banner-services .content-text p {
+                font-size: .8rem;
+            }
+        }
     </style>
 
 </head>
@@ -1895,51 +1981,13 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         </div>
     </header>
     <div class="wrapper-carousel">
+        <div class="mascara-slider"></div>
         <!-- ## Autoplay -->
         <!-- The `autoplay` attribute (`type="slides"` only) advances the slide to the next slide without user interaction, by default it will advance a slide in 5000 millisecond intervals (5 seconds) and can be overridden by the `delay` attribute.  -->
-        <amp-inline-gallery layout="container" id="custom-slider">
-
-            <amp-base-carousel class="gallery" layout="responsive" width="1.5" height="1" auto-advance="true" auto-advance-interval="5000" snap-align="center" loop="true" visible-count="1">
-
-                <div>
-                    <div class="mascara-slider"></div>
-                    <div class="blue-box">
-                        <amp-img src="img/banner4.jpg" width="160" height="100" layout="responsive" alt="a sample image"></amp-img>
-                        <div class="text-banner center-text">
-                            <h1>MAKING BLONDE</h1>
-                            <h2>Resaltamos tu belleza y damos vida a tu imágen.</h2>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="mascara-slider"></div>
-                    <div class="red-box">
-                        <amp-img src="img/banner2.jpg" width="160" height="100" layout="responsive" alt="a sample image"></amp-img>
-                        <div class="text-banner center-text">
-                            <h3>¿UN NUEVO LOOK?</h3>
-                            <h4>La vida es demasiado corta para llevar un pelo aburrido.</h4>
-                        </div>
-                    </div>
-                </div>
-                <div>
-                    <div class="mascara-slider"></div>
-                    <div class="green-box">
-                        <amp-img src="img/banner3.jpg" width="160" height="100" layout="responsive" alt="a sample image"></amp-img>
-                        <div class="text-banner left-text">
-                            <h3>DELICADEZA Y PROFESIONALISMO</h3>
-                            <h4>Cabello, manos y pies en un solo lugar.</h4>
-                        </div>
-                    </div>
-                </div>
-                <button slot="next-arrow" class="carousel-next" aria-label="Next">
-                    <i class="fas fa-chevron-right"></i>
-                </button>
-                <button slot="prev-arrow" class="carousel-prev" aria-label="Previous">
-                    <i class="fas fa-chevron-left"></i>
-                </button>
-            </amp-base-carousel>
-        </amp-inline-gallery>
-
+        <amp-img src="img/banner-servicios.png" width="160" height="40" layout="responsive" alt="servicios"></amp-img>
+        <div class="title-banner">
+            <h1>NUESTROS SERVICIOS</h1>
+        </div>
         <nav class="menu-header hx hs">
             <div class="center-nav container">
                 <ul class="logo-nav">
@@ -1982,105 +2030,60 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     </div>
     <aside id="desktop-sidebar"></aside>
     <main class="rw" style="flex-direction: column;">
-        <nav class="title">
-            <h3>SERVICIOS</h3>
-            <span class="divider hx hs"></span>
-            <a class="btn" href=""><span>Ver todos <i class="fas fa-chevron-right"></i></span></a>
-        </nav>
-
+        <br><br>
         <div class="rr">
-            <div class="rcx12 rcm6 card-service bg-purple">
-                <amp-img src="img/servicio-1.png" width="1.5" height="1" layout="responsive" alt="a sample image"></amp-img>
-                <div class="title-service rf">
-                    <div class="content-title">
-                        <span class="divider"></span>
-                        <h4>TRATAMIENTOS CAPILARES</h4>
-                        <span class="divider"></span>
-                    </div>
-                    <div class="content-more-btn">
-                        <a href="#" class="btn"><span>Ver catálogo <i class="fas fa-chevron-right"></i></span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="rcx12 rcm6 card-service bg-pink">
-                <amp-img src="img/servicio-2.png" width="1.5" height="1" layout="responsive" alt="a sample image"></amp-img>
-                <div class="title-service rf">
-                    <div class="content-title">
-                        <span class="divider"></span>
-                        <h4 style="white-space: nowrap">CORTE Y COLOR</h4>
-                        <span class="divider"></span>
-                    </div>
-                    <div class="content-more-btn">
-                        <a href="#" class="btn"><span>Ver catálogo <i class="fas fa-chevron-right"></i></span></a>
+            <div class="rcx12 card-service bg-purple">
+                <amp-img src="img/servicios/enjuague.png" width="1.5" height="0.4" layout="responsive" alt="a sample image"></amp-img>
+                <div class="banner-services">
+                    <div class="content-text">
+                        <div class="rcx12 rcm6">
+                            <h3>MEDIA COLA CON RISOS</h3>
+                            <p>Un estilo ideal para cumpleaños, bodas y eventos especiales</p>
+                            <a href="#" class="btn"><span>Ver todos <i class="fas fa-chevron-right"></i></span></a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="rcx12 rcm6 card-service bg-pink">
-                <amp-img src="img/servicio-3.png" width="1.5" height="1" layout="responsive" alt="a sample image"></amp-img>
-                <div class="title-service rf">
-                    <div class="content-title">
-                        <span class="divider"></span>
-                        <h4>MAQUILLAJE</h4>
-                        <span class="divider"></span>
-                    </div>
-                    <div class="content-more-btn">
-                        <a href="#" class="btn"><span>Ver catálogo <i class="fas fa-chevron-right"></i></span></a>
+            <div class="rcx12 card-service bg-pink">
+                <amp-img src="img/servicios/tinte.png" width="1.5" height="0.4" layout="responsive" alt="a sample image"></amp-img>
+                <div class="banner-services">
+                    <div class="content-text">
+                        <div class="rcx12 rom6 rcm6">
+                            <h3>MEDIA COLA CON RISOS</h3>
+                            <p>Un estilo ideal para cumpleaños, bodas y eventos especiales</p>
+                            <a href="#" class="btn"><span>Ver todos <i class="fas fa-chevron-right"></i></span></a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="rcx12 rcm6 card-service bg-purple">
-                <amp-img src="img/servicio-4.png" width="1.5" height="1" layout="responsive" alt="a sample image"></amp-img>
-                <div class="title-service rf">
-                    <div class="content-title">
-                        <span class="divider"></span>
-                        <h4>UÑAS</h4>
-                        <span class="divider"></span>
+            <div class="rcx12 card-service  bg-purple">
+                <amp-img src="img/servicios/arreglo-manos-y-pies.png" width="1.5" height="0.4" layout="responsive" alt="a sample image"></amp-img>
+                <div class="banner-services">
+                    <div class="content-text">
+                        <div class="rcx12 rcm6">
+                            <h3>MEDIA COLA CON RISOS</h3>
+                            <p>Un estilo ideal para cumpleaños, bodas y eventos especiales</p>
+                            <a href="#" class="btn"><span>Ver todos <i class="fas fa-chevron-right"></i></span></a>
+                        </div>
                     </div>
-                    <div class="content-more-btn">
-                        <a href="#" class="btn"><span>Ver catálogo <i class="fas fa-chevron-right"></i></span></a>
+                </div>
+            </div>
+            <div class="rcx12 card-service bg-pink">
+                <amp-img src="img/servicios/maquillaje-profesional.png" width="1.5" height="0.4" layout="responsive" alt="a sample image"></amp-img>
+                <div class="banner-services">
+                    <div class="content-text">
+                        <div class="rcx12 rom6 rcm6">
+                            <h3>MEDIA COLA CON RISOS</h3>
+                            <p>Un estilo ideal para cumpleaños, bodas y eventos especiales</p>
+                            <a href="#" class="btn"><span>Ver todos <i class="fas fa-chevron-right"></i></span></a>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        <nav class="title">
-            <h3>NUESTRO TRABAJO</h3>
-            <span class="divider hx hs"></span>
-            <a class="btn" href=""><span>Ver todos <i class="fas fa-chevron-right"></i></span></a>
-        </nav>
-
-        <!-- ## Autoplay -->
-        <!-- The `autoplay` attribute (`type="slides"` only) advances the slide to the next slide without user interaction, by default it will advance a slide in 5000 millisecond intervals (5 seconds) and can be overridden by the `delay` attribute.  -->
-        <amp-carousel id="custom-slider" height="400" layout="fixed-height" autoplay delay="5000" type="slides" role="region" aria-label="Carousel with arbitrary HTML content">
-            <div>
-
-                <div class="blue-box">
-                    <amp-img src="img/foto1.png" width="160" height="100" layout="responsive" alt="a sample image"></amp-img>
-
-                </div>
-            </div>
-            <div>
-                <div class="red-box">
-                    <amp-img src="img/foto2.png" width="160" height="100" layout="responsive" alt="a sample image"></amp-img>
-
-                </div>
-            </div>
-            <div>
-                <div class="green-box">
-                    <amp-img src="img/foto3.png" width="160" height="100" layout="responsive" alt="a sample image"></amp-img>
-
-                </div>
-            </div>
-        </amp-carousel>
-
-        <nav class="title">
-            <h3>ENCUENTRANOS</h3>
-            <span class="divider hx hs"></span>
-            <a class="btn" href=""><span>Contáctenos <i class="fas fa-chevron-right"></i></span></a>
-        </nav>
-
-        <amp-iframe height="350px" title="Google map pin on Googleplex, Mountain View CA" layout="fixed-height" sandbox="allow-scripts allow-same-origin allow-popups" frameborder="0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d994.2340244064704!2d-74.09079094671439!3d4.60546402548332!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e3f9940842647e3%3A0xb2c78aafba5bbbe4!2sMaking%20Blonde!5e0!3m2!1ses!2sco!4v1601998109003!5m2!1ses!2sco">
-        </amp-iframe>
-
+        <div class="rcx12" style="display: flex;justify-content: center;margin-bottom: -50px;margin-top:50px">
+            <a class="btn btn-large" href=""><span>Contáctenos  </span></a>
+        </div>
     </main>
 
     <footer class="rf bg-purple">
