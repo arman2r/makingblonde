@@ -8,18 +8,17 @@
     <title>Making Blonde, Saalon</title>
 
     <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
-    <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Montserrat:ital,wght@0,400;0,500;0,600;0,800;0,900;1,400;1,600;1,800&display=swap" rel="stylesheet">
     <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
-    <link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet" type="text/css" />
-    <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
-    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+    <link href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" rel="stylesheet" type="text/css" />
+
+    <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
     <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+
+    <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
     <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
-    <script custom-element="amp-inline-gallery" src="https://cdn.ampproject.org/v0/amp-inline-gallery-0.1.js" async></script>
-    <script custom-element="amp-base-carousel" src="https://cdn.ampproject.org/v0/amp-base-carousel-0.1.js" async></script>
-    <script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
+
 
 
     <script type="application/ld+json">
@@ -995,271 +994,6 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             z-index: 1;
         }
         
-        @media(min-width:600px) {
-            #custom-slider .text-banner {
-                transform: translateY(-60px)
-            }
-        }
-        
-        @media(min-width:992px) {
-            #custom-slider .text-banner {
-                transform: translateY(-100px)
-            }
-        }
-        
-        .mascara-slider {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 96.5%;
-            z-index: 1;
-            transition: all ease 1s;
-        }
-        
-        amp-base-carousel div .text-banner h1,
-        amp-base-carousel div .text-banner h3 {
-            display: block;
-            transform: translateY(-2em);
-            opacity: 0;
-        }
-        
-        amp-base-carousel div .text-banner h2,
-        amp-base-carousel div .text-banner h4 {
-            display: block;
-            transform: translateY(2em);
-            opacity: 0;
-        }
-        
-        amp-base-carousel div img {
-            transform: scale(2);
-            opacity: 0;
-        }
-        
-        amp-base-carousel div[aria-hidden=false] img {
-            transition: opacity 1.5s, transform 1.5s;
-            transform: scale(1);
-            opacity: 1;
-        }
-        
-        amp-base-carousel div[aria-hidden=false] .text-banner h1,
-        amp-base-carousel div[aria-hidden=false] .text-banner h3 {
-            transform: translateY(0px);
-            transition: opacity 1.5s, transform 1s;
-            opacity: 1;
-        }
-        
-        amp-base-carousel div[aria-hidden=false] .text-banner h2,
-        amp-base-carousel div[aria-hidden=false] .text-banner h4 {
-            transform: translateY(0px);
-            transition: opacity 1.5s, transform 1s;
-            opacity: 1;
-        }
-        
-        #custom-slider {
-            max-height: 100vh;
-        }
-        
-        #custom-slider amp-img img {
-            filter: blur(.12rem);
-        }
-        
-        #custom-slider amp-img::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(41, 15, 38, .5);
-            z-index: 2;
-        }
-        
-        .carousel-prev,
-        .carousel-next {
-            filter: drop-shadow(0px 1px 2px #4a4a4a);
-            width: 40px;
-            height: 40px;
-            padding-top: 10px;
-            padding-bottom: 10px;
-            border-radius: 40px;
-            background-color: transparent;
-            border: none;
-            outline: none;
-            font-size: 1.2rem;
-            background-color: rgba(41, 15, 38, .5);
-            color: rgba(255, 255, 255, .5);
-            outline: none;
-        }
-        
-        @media(min-width:600px) {
-            #custom-slider .carousel-prev {
-                transform: translate(125%, -60px);
-            }
-            #custom-slider .carousel-next {
-                transform: translate(-125%, -60px);
-            }
-        }
-        
-        @media(min-width:992px) {
-            #custom-slider .carousel-prev {
-                transform: translate(125%, -100px);
-            }
-            #custom-slider .carousel-next {
-                transform: translate(-125%, -100px);
-            }
-        }
-        
-        #custom-slider .text-banner h1,
-        #custom-slider .text-banner h3 {
-            font-size: 2.5rem;
-            font-weight: 400;
-            letter-spacing: .5px;
-        }
-        
-        #custom-slider .text-banner h2,
-        #custom-slider .text-banner h4 {
-            font-size: 1.3rem;
-            font-weight: 400;
-            letter-spacing: .5px;
-        }
-        
-        #custom-slider .text-banner {
-            position: absolute;
-            left: 0;
-            right: 0;
-            width: 100%;
-            max-width: 1100px;
-            height: max-content;
-            margin: auto;
-            top: 0;
-            bottom: 0;
-            z-index: 5;
-        }
-        
-        @media(max-width:1279px) {
-            #custom-slider .text-banner {
-                width: 70%;
-                max-width: 1100px;
-            }
-            #custom-slider .text-banner h1,
-            #custom-slider .text-banner h3 {
-                font-size: 1.6rem;
-            }
-            #custom-slider .text-banner h2,
-            #custom-slider .text-banner h4 {
-                font-size: 1rem;
-            }
-        }
-        
-        @media(max-width:599px) {
-            #custom-slider .text-banner h1,
-            #custom-slider .text-banner h3 {
-                font-size: 1.2rem;
-            }
-            #custom-slider .text-banner h2,
-            #custom-slider .text-banner h4 {
-                font-size: .9rem;
-            }
-        }
-        
-        .blue-box,
-        .red-box,
-        .green-box {
-            width: 100%;
-            height: 100vh;
-            background-size: 100%;
-            color: #fff;
-            text-shadow: 4px 0px 8px #333;
-        }
-        
-        @media (min-width:1368px) and (min-height:800px) {
-            .blue-box,
-            .red-box,
-            .green-box {
-                height: 800px;
-                max-height: 800px;
-                display: grid;
-                align-items: center;
-            }
-            #custom-slider {
-                max-height: 800px;
-                overflow: hidden;
-            }
-        }
-        
-        @media (max-width:1200px) {
-            .blue-box,
-            .red-box,
-            .green-box {
-                height: 500px;
-                max-height: 500px;
-            }
-            #custom-slider {
-                max-height: 500px;
-            }
-            .container {
-                max-width: 1100px;
-                width: 80%;
-            }
-        }
-        
-        @media (max-width:991px) {
-            .blue-box,
-            .red-box,
-            .green-box {
-                height: 400px;
-                max-height: 400px;
-            }
-            #custom-slider {
-                max-height: 400px;
-            }
-            .container {
-                max-width: 1100px;
-                width: 90%;
-            }
-        }
-        
-        @media (max-width:767px) {
-            .blue-box,
-            .red-box,
-            .green-box {
-                height: 300px;
-                max-height: 300px;
-            }
-            #custom-slider {
-                max-height: 300px;
-            }
-            .container {
-                max-width: 1100px;
-                width: 95%;
-            }
-        }
-        
-        @media (max-width:480px) {
-            .blue-box,
-            .red-box,
-            .green-box {
-                height: 200px;
-                max-height: 200px;
-            }
-            #custom-slider {
-                max-height: 200px;
-            }
-        }
-        
-        .blue-box {
-            background: #290F26;
-        }
-        
-        .green-box {
-            background: #e497a5;
-        }
-        
-        .red-box {
-            background: #c0ae81;
-        }
-        
         .center-text {
             text-align: center;
         }
@@ -1636,24 +1370,6 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             }
         }
         
-        .card-service {
-            padding: 0 0;
-            position: relative;
-            overflow: hidden;
-            min-height: 300px;
-        }
-        
-        @media(max-width:599px) {
-            .card-service {
-                min-height: 200px;
-                padding-bottom: 20px;
-            }
-        }
-        
-        .card-service amp-image {
-            margin-bottom: 0;
-        }
-        
         .title-service {
             position: absolute;
             text-align: center;
@@ -1943,6 +1659,213 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 font-size: .8rem;
             }
         }
+        
+        .bd.primary {
+            color: #fff;
+            border: solid 2px #C0AE80;
+        }
+        
+        .bd.primary:hover,
+        .bd.primary:focus {
+            border: solid 2px #C0AE80;
+            background-color: #C0AE80;
+            color: #fff
+        }
+        
+        .bd.secondary {
+            color: #fff;
+            border: solid 2px #290F26;
+        }
+        
+        .bd.secondary:hover,
+        .bd.secondary:focus {
+            border: solid 2px #290F26;
+            background-color: #290F26;
+            color: #fff
+        }
+        
+        .bd.accent {
+            color: #290F26;
+            border: solid 2px #C6818F;
+        }
+        
+        .bd.accent:hover,
+        .bd.accent:focus {
+            border: solid 2px #C6818F;
+            background-color: #C6818F;
+            color: #290F26
+        }
+        
+         :root {
+            --color-primary: #005AF0;
+            --color-text-light: #fff;
+            --space-1: .5rem;
+            /* 8px */
+            --space-2: 1rem;
+            /* 16px */
+        }
+        
+        .radio-selector [option] {
+            display: flex;
+            align-items: center;
+        }
+        
+        .radio-selector span {
+            font-size: .8rem;
+        }
+        
+        .radio-selector [option]:before {
+            transition: background 0.25s ease-in-out;
+            content: "";
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            margin: var(--space-1);
+            border-radius: 100%;
+            border: solid 1px var(--color-primary);
+        }
+        
+        .radio-selector [option][selected]:before {
+            text-align: center;
+            content: "✓";
+            color: var(--color-text-light);
+            background-color: var(--color-primary);
+        }
+        
+        .contact-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .contact-btn.bd.secondary {
+            color: #290f26
+        }
+        
+        .contact-btn.bd.secondary:hover {
+            color: #fff
+        }
+        
+        .contact-btn.bd:first-child {
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+        
+        .contact-btn.bd:last-child {
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+        
+        .contact-btn i {
+            font-size: 2rem;
+            margin: 0 15px
+        }
+        
+        .contact-btn.bd {
+            transition: all ease-in-out .2s;
+        }
+        
+        .contact-btn.bd.facebook span,
+        .contact-btn.bd.facebook i {
+            position: relative;
+        }
+        
+        .contact-btn.bd.facebook {
+            background-color: #2D88FF;
+            color: #fff;
+            border: none;
+            padding-top: 15px;
+            padding-bottom: 15px
+        }
+        
+        .contact-btn.bd.facebook:hover {
+            border: none;
+        }
+        
+        .contact-btn.bd.facebook:hover::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .2);
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+        
+        .contact-btn.bd.instagram {
+            background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+            color: #fff;
+            border: none;
+            padding-top: 15px;
+            padding-bottom: 15px
+        }
+        
+        .contact-btn.bd.instagram:hover {
+            border: none;
+        }
+        
+        .contact-btn.bd.instagram:hover::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, .2);
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+        
+        .form-contact {
+            padding: 30px 20px;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-flow: wrap;
+            border-radius: 30px;
+            border: 1px solid rgba(0, 0, 0, .2)
+        }
+        
+        .form-contact label {
+            width: 100%;
+            display: flex;
+            flex-flow: column;
+        }
+        
+        .form-contact .radio-selector {
+            display: flex;
+            flex-flow: wrap;
+            align-self: start;
+            justify-content: space-around;
+        }
+        
+        .form-contact .radio-selector * {
+            padding-right: 10px;
+            box-sizing: border-box;
+        }
+        
+        .form-contact label input {
+            padding: 15px;
+            box-sizing: border-box;
+            border-radius: 30px;
+            margin-bottom: 10px;
+            border: 1px solid rgba(0, 0, 0, .2);
+            outline: none;
+        }
+        
+        .form-contact textarea {
+            padding: 15px;
+            box-sizing: border-box;
+            border-radius: 30px;
+            margin-bottom: 10px;
+            border: 1px solid rgba(0, 0, 0, .2);
+            outline: none;
+            width: 100%;
+            min-height: 150px;
+        }
     </style>
 
 </head>
@@ -2010,7 +1933,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         <!-- The `autoplay` attribute (`type="slides"` only) advances the slide to the next slide without user interaction, by default it will advance a slide in 5000 millisecond intervals (5 seconds) and can be overridden by the `delay` attribute.  -->
         <amp-img src="img/banner-servicios.png" width="160" height="40" layout="responsive" alt="servicios"></amp-img>
         <div class="title-banner">
-            <h1>NUESTROS SERVICIOS</h1>
+            <h1>CONTÁCTENOS</h1>
         </div>
         <nav class="menu-header hx hs">
             <div class="center-nav container">
@@ -2029,7 +1952,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                     </a>
                     </li>
                     <li>
-                        <a class="active" href="servicios.html">
+                        <a href="servicios.html">
                         SERVICIOS
                     </a>
                     </li>
@@ -2044,7 +1967,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                     </a>
                     </li>
                     <li>
-                        <a href="contactenos.html">
+                        <a class="active" href="contactenos.html">
                         CONTÁCTENOS
                     </a>
                     </li>
@@ -2053,60 +1976,105 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         </nav>
     </div>
     <aside id="desktop-sidebar"></aside>
-    <main class="rw" style="flex-direction: column;">
-        <br><br>
-        <div class="rr">
-            <div class="rcx12 card-service bg-purple">
-                <amp-img src="img/servicios/enjuague.png" width="1.8" height="0.5" layout="responsive" alt="a sample image"></amp-img>
-                <div class="banner-services">
-                    <div class="content-text">
-                        <div class="rcx12 rcm6">
-                            <h3>TRATAMIENTOS CAPILARES</h3>
-                            <p>En Making Blonde encuentras la mejor asesoría y selección de productos para el cuidado de su cabello.</p>
-                            <a href="#" class="btn"><span>Ver todos <i class="fas fa-chevron-right"></i></span></a>
-                        </div>
-                    </div>
+    <main class="rw" style="flex-direction: column">
+        <div class="rcx12 rcm12 rcl12">
+            <nav class="title">
+                <h3>Información de contácto</h3>
+            </nav>
+
+            <div class="rr">
+                <div class="rcx12 rcm4 center-text bd contact-btn secondary">
+                    <i class="fas fa-home"></i>
+                    <span>Cra 23 # 8-93, Bogotá</span>
+                </div>
+                <div class="rcx12 rcm4 center-text bd contact-btn secondary">
+                    <i class="fas fa-mobile"></i>
+                    <span>+57 312 485 41 82</span>
+                </div>
+                <div class="rcx12 rcm4 center-text bd contact-btn secondary">
+                    <i class="fas fa-envelope"></i>
+                    <span>makingblonde2020@gmail.com</span>
                 </div>
             </div>
-            <div class="rcx12 card-service bg-pink">
-                <amp-img src="img/servicios/tinte.png" width="1.8" height="0.5" layout="responsive" alt="a sample image"></amp-img>
-                <div class="banner-services">
-                    <div class="content-text">
-                        <div class="rcx12 rom6 rcm6">
-                            <h3>CORTE Y COLOR</h3>
-                            <p>en Making Blonde somos especialistas en resaltar la belleza y cuidado de su cabello.</p>
-                            <a href="#" class="btn"><span>Ver todos <i class="fas fa-chevron-right"></i></span></a>
-                        </div>
-                    </div>
-                </div>
+
+            <nav class="title">
+                <h3>Síguenos</h3>
+            </nav>
+
+            <div class="rr">
+                <a href="https://www.facebook.com/makingblonde2020/" target="_blank" class="rcx12 rcm6 center-text bd contact-btn facebook">
+                    <i class="fab fa-facebook"></i>
+                    <span>makingblonde2020</span>
+                </a>
+                <a href="https://www.instagram.com/makingblonde2020/" target="_blank" class="rcx12 rcm6 center-text bd contact-btn instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>makingblonde2020</span>
+                </a>
+
             </div>
-            <div class="rcx12 card-service  bg-purple">
-                <amp-img src="img/servicios/arreglo-manos-y-pies.png" width="1.8" height="0.5" layout="responsive" alt="a sample image"></amp-img>
-                <div class="banner-services">
-                    <div class="content-text">
-                        <div class="rcx12 rcm6">
-                            <h3>ARREGLO UÑAS</h3>
-                            <p>Making Blonde te ofrece variedad y estilo en el arreglo y cuidado de tus uñas, manos y píes.</p>
-                            <a href="#" class="btn"><span>Ver todos <i class="fas fa-chevron-right"></i></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="rcx12 card-service bg-pink">
-                <amp-img src="img/servicios/maquillaje-profesional.png" width="1.8" height="0.5" layout="responsive" alt="a sample image"></amp-img>
-                <div class="banner-services">
-                    <div class="content-text">
-                        <div class="rcx12 rom6 rcm6">
-                            <h3>MAQULLAJE</h3>
-                            <p>Making Blonde cuenta con los mejores productos y manos profesionales para el buen trato de su piel.</p>
-                            <a href="#" class="btn"><span>Ver todos <i class="fas fa-chevron-right"></i></span></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="rcx12" style="display: flex;justify-content: center;margin-bottom: -50px;margin-top:50px">
-            <a class="btn btn-large" href=""><span>Contáctenos  </span></a>
+
+            <nav class="title">
+                <h3>Formulario de contácto</h3>
+            </nav>
+            <form class="rcx12 rcm10 rom1" id="contact-form" method="post" action-xhr="https://example.com/subscribe" custom-validation-reporting="show-all-on-submit" target="_blank">
+                <fieldset class="form-contact">
+                    <label>
+             
+            <input type="text"
+            placeholder="Nombres:"
+              name="nombres"
+              id="nombres"
+              required
+              pattern="\w+\s\w+">
+            <span visible-when-invalid="valueMissing"
+              validation-for="nombres"></span>
+            <span visible-when-invalid="patternMismatch"
+              validation-for="nombres">
+              Please enter your first and last name separated by a space (e.g. Jane Miller)
+            </span>
+          </label>
+                    <br>
+                    <label>
+           
+            <input type="email"
+            placeholder="email"
+              name="email"
+              id="email"
+              required>
+            <span visible-when-invalid="valueMissing"
+              validation-for="email"></span>
+            <span visible-when-invalid="typeMismatch"
+              validation-for="email"></span>
+          </label>
+                    <br>
+                    <label>
+            
+            <input type="phone"
+            placeholder="teléfono"
+              name="telefono"
+              id="telefono"
+              required>
+            <span visible-when-invalid="valueMissing"
+              validation-for="telefono"></span>
+            <span visible-when-invalid="typeMismatch"
+              validation-for="telefono"></span>
+          </label>
+                    <br>
+                    <p><sub>Asunto por el cual se comunica con nosotros:</sub></p>
+                    <br><br>
+                    <label>
+                        <amp-selector class="radio-selector" layout="container" name="my-selector">
+                            <div option="cotizacion"><span>cotización de producto(s)</span></div>
+                            <div option="agendarCita"><span>Agendar cita</span></div>
+                            <div option="pqr"><span>PQR</span></div>
+                        </amp-selector>
+                    </label>
+                    <br><br><br>
+                    <textarea placeholder="Nos gustaría conocer mas en detalle el motivo de esta solicitud." autoexpand></textarea>
+
+                    <button type="submit" class="bd btn"><span>Enviar <i class="fas fa-chevron-right"></i></span></button>
+                </fieldset>
+            </form>
         </div>
     </main>
 

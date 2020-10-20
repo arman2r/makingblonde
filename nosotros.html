@@ -1689,8 +1689,10 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             height: 520px;
             position: relative;
             border-radius: 20px;
+            background: #fff;
+            box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0);
             transform: translateY(0);
-            transition: background .2s ease-in-out;
+            transition: background-color .2s ease-in-out;
             transition: box-shadow .2s ease-in-out;
             transition: transform .2s ease-in-out;
         }
@@ -1741,11 +1743,9 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         
         .profiles .slide:hover {
             transform: translateY(-5px);
-            transition: transform ease-in-out .3s;
-            transition: background .2s ease-in-out;
-            transition: box-shadow .4s ease-in-out;
             background-color: #C6818F;
             box-shadow: 0px 13px 29px -12px rgba(0, 0, 0, 0.75);
+            transition: background-color .25s ease-in-out, transform ease-in-out .3s, box-shadow .4s ease-in-out;
         }
         
         .profiles .slide:hover img {
@@ -1821,7 +1821,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 <body>
 
-    <amp-sidebar class="full-sidebar" id="sidebar" layout="nodisplay">
+    <amp-sidebar class="full-sidebar" id="sidebar" layout="nodisplay" side="right">
         <div class="container">
             <div class="rw" style="padding-right: 10px;">
                 <button class="hamburger" style="float:right;margin:15px 0" on='tap:sidebar.toggle' aria-label="Click to open sidebar">
@@ -1916,7 +1916,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                     </a>
                     </li>
                     <li>
-                        <a href="contatenos.html">
+                        <a href="contactenos.html">
                         CONTÁCTENOS
                     </a>
                     </li>
@@ -2038,7 +2038,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                     </div>
                     <div class="rcx6 rcm3 item-center">
                         <amp-img src="img/llamada-telefonica.png" layout="fixed" width="57" height="57" alt="making blonde"></amp-img>
-                        <span>322 354 6776<br>031 233 99 00</span>
+                        <span style="font-size: 1rem">+57 312 485 41 82</span>
                     </div>
                     <div class="rcx6 rcm3 item-center">
                         <amp-img src="img/email.png" layout="fixed" width="57" height="57" alt="making blonde"></amp-img>
