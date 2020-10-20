@@ -17,9 +17,7 @@
     <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
     <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
     <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
-    <script custom-element="amp-inline-gallery" src="https://cdn.ampproject.org/v0/amp-inline-gallery-0.1.js" async></script>
     <script custom-element="amp-base-carousel" src="https://cdn.ampproject.org/v0/amp-base-carousel-0.1.js" async></script>
-    <script async custom-element="amp-script" src="https://cdn.ampproject.org/v0/amp-script-0.1.js"></script>
 
 
     <script type="application/ld+json">
@@ -1679,8 +1677,10 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             }
         }
         
-        .profiles div {
+        .profiles div[tabindex="-1"]:first-child {
             outline: none;
+            height: 600px;
+            padding-top: 10px;
         }
         
         .profiles .slide {
@@ -1689,7 +1689,10 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             height: 520px;
             position: relative;
             border-radius: 20px;
+            transform: translateY(0);
             transition: background .2s ease-in-out;
+            transition: box-shadow .2s ease-in-out;
+            transition: transform .2s ease-in-out;
         }
         
         .profiles .slide img {
@@ -1737,8 +1740,12 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         }
         
         .profiles .slide:hover {
+            transform: translateY(-5px);
+            transition: transform ease-in-out .3s;
             transition: background .2s ease-in-out;
+            transition: box-shadow .4s ease-in-out;
             background-color: #C6818F;
+            box-shadow: 0px 13px 29px -12px rgba(0, 0, 0, 0.75);
         }
         
         .profiles .slide:hover img {
