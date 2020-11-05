@@ -963,11 +963,14 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         
         @media(min-width:600px) {
             #custom-slider .text-banner {
-                transform: translateY(-60px)
+                transform: translateY(-80px)
+            }
+            #custom-slider amp-img img {
+                filter: blur(.05);
             }
         }
         
-        @media(min-width:992px) {
+        @media(min-width:900px) {
             #custom-slider .text-banner {
                 transform: translateY(-100px)
             }
@@ -978,8 +981,8 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             left: 0;
             top: 0;
             width: 100%;
-            height: 96.5%;
-            z-index: 1;
+            height: 100 %;
+            z-index: 0;
             transition: all ease 1s;
         }
         
@@ -1139,21 +1142,6 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             text-shadow: 4px 0px 8px #333;
         }
         
-        @media (min-width:1368px) and (min-height:800px) {
-            .blue-box,
-            .red-box,
-            .green-box {
-                height: 800px;
-                max-height: 800px;
-                display: grid;
-                align-items: center;
-            }
-            #custom-slider {
-                max-height: 800px;
-                overflow: hidden;
-            }
-        }
-        
         @media (max-width:1200px) {
             .blue-box,
             .red-box,
@@ -1200,9 +1188,39 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 max-width: 1100px;
                 width: 95%;
             }
+            #custom-slider amp-img img {
+                filter: blur(0);
+            }
         }
         
         @media (max-width:480px) {
+            .blue-box,
+            .red-box,
+            .green-box {
+                height: 250px;
+                max-height: 250px;
+            }
+            #custom-slider {
+                max-height: 250px;
+            }
+            #custom-slider amp-img img {
+                filter: blur(0);
+            }
+        }
+        
+        @media (max-width:400px) {
+            .blue-box,
+            .red-box,
+            .green-box {
+                height: 220px;
+                max-height: 220px;
+            }
+            #custom-slider {
+                max-height: 220px;
+            }
+        }
+        
+        @media (max-width:350px) {
             .blue-box,
             .red-box,
             .green-box {
@@ -1920,7 +1938,6 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             <amp-base-carousel class="gallery" layout="responsive" width="1.5" height="1" auto-advance="true" auto-advance-interval="5000" snap-align="center" loop="true" visible-count="1">
 
                 <div>
-                    <div class="mascara-slider"></div>
                     <div class="blue-box">
                         <amp-img src="img/banner4.jpg" width="160" height="100" layout="responsive" alt="a sample image"></amp-img>
                         <div class="text-banner center-text">
@@ -1930,7 +1947,6 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                     </div>
                 </div>
                 <div>
-                    <div class="mascara-slider"></div>
                     <div class="red-box">
                         <amp-img src="img/banner2.jpg" width="160" height="100" layout="responsive" alt="a sample image"></amp-img>
                         <div class="text-banner center-text">
@@ -1940,7 +1956,6 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                     </div>
                 </div>
                 <div>
-                    <div class="mascara-slider"></div>
                     <div class="green-box">
                         <amp-img src="img/banner3.jpg" width="160" height="100" layout="responsive" alt="a sample image"></amp-img>
                         <div class="text-banner left-text">
@@ -1956,6 +1971,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                     <i class="fas fa-chevron-left"></i>
                 </button>
             </amp-base-carousel>
+            <div class="mascara-slider"></div>
         </amp-inline-gallery>
 
         <nav class="menu-header hx hs">
@@ -2103,20 +2119,20 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                         <h5>SUSCRIBETE A NUESTRO BOLETÍN</h5>
 
                         <form id="subscribe" class="sample-form" action="" method="post" custom-validation-reporting="as-you-go">
-                            <div>
+                            <div style="display:flex">
                                 <input type="email" id="email" name="email" placeholder="Email..." required>
                                 <button id="sendSubscribe" type="submit"><i class="fas fa-chevron-right"></i></button>
                             </div>
                             <div>
-                                <span visible-when-invalid="valueMissing" validation-for="email"></span>
-                                <span visible-when-invalid="typeMismatch" validation-for="email"></span>
+                                <sub visible-when-invalid="valueMissing" validation-for="email"></sub>
+                                <sub visible-when-invalid="typeMismatch" validation-for="email"></sub>
 
-                                <div submit-success>
+                                <sub submit-success>
                                     Success!
-                                </div>
-                                <div submit-error>
+                                </sub>
+                                <sub submit-error>
                                     Error!
-                                </div>
+                                </sub>
                             </div>
                         </form>
                     </div>

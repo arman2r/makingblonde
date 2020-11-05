@@ -2068,20 +2068,20 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                         <h5>SUSCRIBETE A NUESTRO BOLETÍN</h5>
 
                         <form id="subscribe" class="sample-form" action="" method="post" custom-validation-reporting="as-you-go">
-                            <div>
+                            <div style="display:flex">
                                 <input type="email" id="email" name="email" placeholder="Email..." required>
                                 <button id="sendSubscribe" type="submit"><i class="fas fa-chevron-right"></i></button>
                             </div>
                             <div>
-                                <span visible-when-invalid="valueMissing" validation-for="email"></span>
-                                <span visible-when-invalid="typeMismatch" validation-for="email"></span>
+                                <sub visible-when-invalid="valueMissing" validation-for="email"></sub>
+                                <sub visible-when-invalid="typeMismatch" validation-for="email"></sub>
 
-                                <div submit-success>
+                                <sub submit-success>
                                     Success!
-                                </div>
-                                <div submit-error>
+                                </sub>
+                                <sub submit-error>
                                     Error!
-                                </div>
+                                </sub>
                             </div>
                         </form>
                     </div>
