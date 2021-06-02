@@ -5,9 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
     <script async src="https://cdn.ampproject.org/v0.js"></script>
-    <title>Making Blonde, Saalon</title>
+    <title>Making Blonde, Nuestra apertura</title>
 
-    <link rel="canonical" href="https://amp.dev/documentation/guides-and-tutorials/start/create/basic_markup/">
+    <link rel="canonical" href="detalle-blog.html">
     <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Montserrat:ital,wght@0,400;0,500;0,600;0,800;0,900;1,400;1,600;1,800&display=swap" rel="stylesheet">
@@ -1220,12 +1220,20 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             margin: 30px 0
         }
         
+        nav.title h2 {
+            font-size: 28px;
+        }
+        
+        nav.title h2,
         nav.title h3 {
             position: relative;
             color: #C0AE80;
             padding-left: 25px;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
         }
         
+        nav.title h2::before,
         nav.title h3::before {
             content: '';
             position: absolute;
@@ -1243,11 +1251,13 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         }
         
         @media(max-width:599px) {
+            nav.title h2,
             nav.title h3 {
                 font-size: 1.2rem;
                 width: max-content;
                 padding-left: 15px;
             }
+            nav.title h2::before,
             nav.title h3::before {
                 width: 8px;
                 height: 8px;
@@ -2053,15 +2063,15 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
         </div>
     </header>
-    <div class="wrapper-carousel">
+    <div class="wrapper-carousel" style="max-height: 480px">
         <div class="mascara-slider"></div>
         <!-- ## Autoplay -->
         <!-- The `autoplay` attribute (`type="slides"` only) advances the slide to the next slide without user interaction, by default it will advance a slide in 5000 millisecond intervals (5 seconds) and can be overridden by the `delay` attribute.  -->
         <div amp-fx="parallax fly-in-bottom" data-parallax-factor="1.5">
-            <amp-img src="img/foto1.png" width="1920" height="1117" layout="responsive" alt="servicios"></amp-img>
+            <amp-img src="img/banner3.jpg" width="1920" height="1117" layout="responsive" alt="servicios"></amp-img>
         </div>
         <div class="title-banner">
-            <h1>BLOG</h1>
+            <h1>Nuestra apertura</h1>
         </div>
         <nav class="menu-header hx hs">
             <div class="center-nav container">
@@ -2112,7 +2122,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     <main id="cuidad-capilar" class="rw" style="flex-direction: column">
         <br><br>
         <nav id="search" class="title scrollspy">
-            <h3>Tendencias</h3>
+            <h2>Un espacio dedicado para tu cuidado</h2>
 
             <div class="blog-search">
                 <div class="contnt-search">
@@ -2163,123 +2173,92 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             </div>
         </div>
         <div class="rw">
-            <div class="rcx12 rcm6 rcl4">
-                <div class="card-item-blog">
-                    <amp-img src="img/banner3.jpg" layout="responsive" width="1.33" height="1" alt="making blonde"></amp-img>
-                    <div class="txt-item-blog">
-                        <div class="divider"></div>
-                        <div class="divider"></div>
-                        <div class="rcx12 item-txt">
+            <div class="rcx12 rcm12 rcl8">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quo ducimus quibusdam explicabo delectus doloremque repellendus quam enim fugiat, assumenda veniam provident incidunt quis debitis rem. Atque exercitationem placeat molestiae?<br>Lorem
+                    ipsum dolor sit, amet consectetur adipisicing elit. Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab? ipsum dolor sit, amet consectetur
+                    adipisicing elit. Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab?<br> adipisicing elit. Magni sit vero enim cumque ipsa officia
+                    esse, iusto nisi iure inventore corporis quibusdam? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab?<br><br> adipisicing elit. Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam?
+                    Sapiente impedit, ipsa eos voluptates maiores laboriosam ab?<br> Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, minima saepe ullam tempora omnis molestiae quidem id vel tempore quibusdam ducimus repudiandae commodi.
+                    Quidem odio vel error beatae assumenda doloribus.</p>
+                <br>
+                <amp-carousel class="carousel2" loop autoplay delay="3000" height="300" layout="fixed-height" type="carousel" role="region" aria-label="Basic usage carousel">
+                    <div class="slide">
+                        <amp-img src="img/color/making-blonde-cliente-diana.jpg" width="400" height="300" alt="a sample image" lightbox></amp-img>
 
-                            <h3><sub>Nuestra apertura</sub></h3>
-                            <p>Conozca nuestras nuevas instalaciones, adecuadas para tu cuidado.</p>
-
-                        </div>
-                        <div class="divider"></div>
-                        <a href="detalle-blog.html" class="bd btn user-valid valid"><span>Ver nota <i class="fas fa-chevron-right"></i></span></a>
                     </div>
-                </div>
+                    <div class="slide">
+                        <amp-img src="img/color/making-blonde-cliente-diana-avendano.jpg" width="400" height="300" alt="a sample image" lightbox></amp-img>
+
+                    </div>
+                    <div class="slide">
+                        <amp-img src="img/color/making-blonde-cliente-erika.jpg" width="400" height="300" alt="a sample image" lightbox></amp-img>
+
+                    </div>
+                    <div class="slide">
+                        <amp-img src="img/color/making-blonde-cliente-geraldin-navas.jpg" width="400" height="300" alt="a sample image" lightbox></amp-img>
+
+                    </div>
+                    <div class="slide">
+                        <amp-img src="img/color/making-blonde-cliente-gina.jpg" width="400" height="300" alt="a sample image" lightbox></amp-img>
+
+                    </div>
+                    <div class="slide">
+                        <amp-img src="img/color/making-blonde-cliente-gina1.jpg" width="400" height="300" alt="a sample image" lightbox></amp-img>
+
+                    </div>
+                    <div class="slide">
+                        <amp-img src="img/color/making-blonde-cliente-karla.jpg" width="400" height="300" alt="a sample image" lightbox></amp-img>
+
+                    </div>
+                    <div class="slide">
+                        <amp-img src="img/color/making-blonde-cliente-laura.jpg" width="400" height="300" alt="a sample image" lightbox></amp-img>
+
+                    </div>
+                    <div class="slide">
+                        <amp-img src="img/color/making-blonde-cliente-leidy.jpg" width="400" height="300" alt="a sample image" lightbox></amp-img>
+
+                    </div>
+                    <div class="slide">
+                        <amp-img src="img/color/making-blonde-cliente-lina.jpg" width="400" height="300" alt="a sample image" lightbox></amp-img>
+
+                    </div>
+                    <div class="slide">
+                        <amp-img src="img/color/making-blonde-cliente-maria.jpg" width="400" height="300" alt="a sample image" lightbox></amp-img>
+
+                    </div>
+                    <div class="slide">
+                        <amp-img src="img/color/making-blonde-cliente-monica.jpg" width="400" height="300" alt="a sample image" lightbox></amp-img>
+
+                    </div>
+                    <div class="slide">
+                        <amp-img src="img/color/making-blonde-cliente-natalia.jpg" width="400" height="300" alt="a sample image" lightbox></amp-img>
+
+                    </div>
+                    <div class="slide">
+                        <amp-img src="img/color/making-blonde-cliente-patricia.jpg" width="400" height="300" alt="a sample image" lightbox></amp-img>
+
+                    </div>
+                    <div class="slide">
+                        <amp-img src="img/color/making-blonde-cliente-vanesa-cabello-adelante.jpg" width="400" height="300" alt="a sample image" lightbox></amp-img>
+
+                    </div>
+                    <div class="slide">
+                        <amp-img src="img/color/making-blonde-cliente-vanesa-cabello-atras.jpg" width="400" height="300" alt="a sample image" lightbox></amp-img>
+
+                    </div>
+                </amp-carousel>
+
             </div>
-            <div class="rcx12 rcm6 rcl4">
-                <div class="card-item-blog">
-                    <amp-img src="img/banner3.jpg" layout="responsive" width="1.33" height="1" alt="making blonde"></amp-img>
-                    <div class="txt-item-blog">
-                        <div class="divider"></div>
-                        <div class="divider"></div>
-                        <div class="rcx12 item-txt">
-
-                            <h3><sub>Nuestra apertura</sub></h3>
-                            <p>Conozca nuestras nuevas instalaciones, adecuadas para tu cuidado.</p>
-
-                        </div>
-                        <div class="divider"></div>
-                        <a href="detalle-blog.html" class="bd btn user-valid valid"><span>Ver nota <i class="fas fa-chevron-right"></i></span></a>
-                    </div>
+            <div class="rcx12 rcm12 rcl4" style="position: sticky;top: 70px;">
+                <div class="rcx12 rcm12">
+                    <sub>Compartir</sub><br>
+                    <amp-social-share class="rounded" aria-label="Share on Facebook" type="facebook" data-param-app_id="254325784911610" width="48" height="48"></amp-social-share>
+                    <amp-social-share class="rounded" aria-label="Share on Twitter" type="twitter" width="48" height="48"></amp-social-share>
+                    <amp-social-share class="rounded" aria-label="Share on WhatsApp" type="whatsapp" width="48" height="48"></amp-social-share>
                 </div>
-            </div>
-            <div class="rcx12 rcm6 rcl4">
-                <div class="card-item-blog">
-                    <amp-img src="img/banner3.jpg" layout="responsive" width="1.33" height="1" alt="making blonde"></amp-img>
-                    <div class="txt-item-blog">
-                        <div class="divider"></div>
-                        <div class="divider"></div>
-                        <div class="rcx12 item-txt">
-
-                            <h3><sub>Nuestra apertura</sub></h3>
-                            <p>Conozca nuestras nuevas instalaciones, adecuadas para tu cuidado.</p>
-
-                        </div>
-                        <div class="divider"></div>
-                        <a href="detalle-blog.html" class="bd btn user-valid valid"><span>Ver nota <i class="fas fa-chevron-right"></i></span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="rcx12 rcm6 rcl4">
-                <div class="card-item-blog">
-                    <amp-img src="img/banner3.jpg" layout="responsive" width="1.33" height="1" alt="making blonde"></amp-img>
-                    <div class="txt-item-blog">
-                        <div class="divider"></div>
-                        <div class="divider"></div>
-                        <div class="rcx12 item-txt">
-
-                            <h3><sub>Nuestra apertura</sub></h3>
-                            <p>Conozca nuestras nuevas instalaciones, adecuadas para tu cuidado.</p>
-
-                        </div>
-                        <div class="divider"></div>
-                        <a href="detalle-blog.html" class="bd btn user-valid valid"><span>Ver nota <i class="fas fa-chevron-right"></i></span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="rcx12 rcm6 rcl4">
-                <div class="card-item-blog">
-                    <amp-img src="img/banner3.jpg" layout="responsive" width="1.33" height="1" alt="making blonde"></amp-img>
-                    <div class="txt-item-blog">
-                        <div class="divider"></div>
-                        <div class="divider"></div>
-                        <div class="rcx12 item-txt">
-
-                            <h3><sub>Nuestra apertura</sub></h3>
-                            <p>Conozca nuestras nuevas instalaciones, adecuadas para tu cuidado.</p>
-
-                        </div>
-                        <div class="divider"></div>
-                        <a href="detalle-blog.html" class="bd btn user-valid valid"><span>Ver nota <i class="fas fa-chevron-right"></i></span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="rcx12 rcm6 rcl4">
-                <div class="card-item-blog">
-                    <amp-img src="img/banner3.jpg" layout="responsive" width="1.33" height="1" alt="making blonde"></amp-img>
-                    <div class="txt-item-blog">
-                        <div class="divider"></div>
-                        <div class="divider"></div>
-                        <div class="rcx12 item-txt">
-
-                            <h3><sub>Nuestra apertura</sub></h3>
-                            <p>Conozca nuestras nuevas instalaciones, adecuadas para tu cuidado.</p>
-
-                        </div>
-                        <div class="divider"></div>
-                        <a href="detalle-blog.html" class="bd btn user-valid valid"><span>Ver nota <i class="fas fa-chevron-right"></i></span></a>
-                    </div>
-                </div>
-            </div>
-            <div class="rcx12 rcm6 rcl4">
-                <div class="card-item-blog">
-                    <amp-img src="img/banner3.jpg" layout="responsive" width="1.33" height="1" alt="making blonde"></amp-img>
-                    <div class="txt-item-blog">
-                        <div class="divider"></div>
-                        <div class="divider"></div>
-                        <div class="rcx12 item-txt">
-
-                            <h3><sub>Nuestra apertura</sub></h3>
-                            <p>Conozca nuestras nuevas instalaciones, adecuadas para tu cuidado.</p>
-
-                        </div>
-                        <div class="divider"></div>
-                        <a href="detalle-blog.html" class="bd btn user-valid valid"><span>Ver nota <i class="fas fa-chevron-right"></i></span></a>
-                    </div>
+                <div class="rcx12">
+                    <amp-instagram data-shortcode="fBwFP" data-captioned width="400" height="400" layout="responsive">
+                    </amp-instagram>
                 </div>
             </div>
         </div>
@@ -2366,8 +2345,11 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     <script async custom-element="amp-fx-collection" src="https://cdn.ampproject.org/v0/amp-fx-collection-0.1.js"></script>
     <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
     <script async custom-element="amp-mega-menu" src="https://cdn.ampproject.org/v0/amp-mega-menu-0.1.js"></script>
-    <script async custom-element="amp-live-list" src="https://cdn.ampproject.org/v0/amp-live-list-0.1.js"></script>
-
+    <!--
+    Import the `amp-social-share` component in the header.
+    -->
+    <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
+    <script async custom-element="amp-instagram" src="https://cdn.ampproject.org/v0/amp-instagram-0.1.js"></script>
     <script amp-script>
         var nystories = document.querySelectorAll("main")[0];
         var navMenu = document.querySelectorAll(".menu-header")[0];
@@ -2417,332 +2399,6 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             //xhr.open('POST', 'https://somedomain.com/subscriptions?email=' + {"email": email.value});
             //xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
             //xhr.send();
-        }
-    </script>
-    <script type="application/ld+json">
-        {
-            "@context": "http://schema.org",
-            "@type": "LiveBlogPosting",
-            "url": "https://amp.dev/documentation/examples/news-publishing/live_blog/",
-            "articleBody": "This is the initial text in the blog post",
-            "datePublished": "2016-09-08T23:04:28.24337",
-            "about": {
-                "@type": "Event",
-                "description": "This is my great live blog sample",
-                "startDate": "2016-07-23T13:00:00-07:00",
-                "endDate": "2016-07-23T15:00:00-07:00",
-                "name": "An AMP Live Blog",
-                "url": "https://amp.dev/documentation/examples/news-publishing/live_blog/",
-                "location": {
-                    "@type": "EventVenue",
-                    "name": "The Venue Name",
-                    "address": {
-                        "@type": "PostalAddress",
-                        "streetAddress": "701 Mission St",
-                        "addressLocality": "San Francisco",
-                        "addressRegion": "CA",
-                        "postalCode": "94103",
-                        "addressCountry": "US"
-                    }
-                }
-            },
-            "publisher": {
-                "@type": "Organization",
-                "name": "Google",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "/static/samples/img/favicon.png",
-                    "width": "512",
-                    "height": "512"
-                }
-            },
-            "author": {
-                "@type": "Person",
-                "sameAs": "https://github.com/kul3r4",
-                "name": "Chiara Chiappini"
-            },
-            "image": {
-                "@type": "ImageObject",
-                "url": "/static/samples/img/abe_preview.png",
-                "height": "1532",
-                "width": "2046"
-            },
-            "coverageStartTime": "2016-07-23T11:30:00-07:00",
-            "coverageEndTime": "2016-07-23T16:00:00-07:00",
-            "headline": "An AMP Live Blog",
-            "description": "A Live Blog implementation with AMP",
-            "liveBlogUpdate": "{
-            "@type": "BlogPosting",
-            "headline": "Green landscape",
-            "url": "https://amp.dev/documentation/examples/news-publishing/live_blog/#post1",
-            "datePublished": 1622636684741,
-            "author": {
-                "@type": "Person",
-                "sameAs": "https://github.com/kul3r4",
-                "name": "Chiara Chiappini"
-            },
-            "articleBody": "Text",
-            "publisher": {
-                "@type": "Organization",
-                "name": "amp.dev",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://amp.dev/img/favicon.png",
-                    "width": "512",
-                    "height": "512"
-                }
-            },
-            "image": {
-                "@type": "ImageObject",
-                "url": "https://amp.dev/static/samples/img/landscape_green_1280x853.jpg",
-                "width": "853",
-                "height": "1280"
-            }
-        } {
-            "@type": "BlogPosting",
-            "headline": "Mountains",
-            "url": "https://amp.dev/documentation/examples/news-publishing/live_blog/#post2",
-            "datePublished": 1622636684741,
-            "author": {
-                "@type": "Person",
-                "sameAs": "https://github.com/kul3r4",
-                "name": "Chiara Chiappini"
-            },
-            "articleBody": "Text",
-            "publisher": {
-                "@type": "Organization",
-                "name": "amp.dev",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://amp.dev/img/favicon.png",
-                    "width": "512",
-                    "height": "512"
-                }
-            },
-            "image": {
-                "@type": "ImageObject",
-                "url": "https://amp.dev/static/samples/img/landscape_mountains_1280x657.jpg",
-                "width": "853",
-                "height": "1280"
-            }
-        } {
-            "@type": "BlogPosting",
-            "headline": "Road leading to a lake",
-            "url": "https://amp.dev/documentation/examples/news-publishing/live_blog/#post3",
-            "datePublished": 1622636684741,
-            "author": {
-                "@type": "Person",
-                "sameAs": "https://github.com/kul3r4",
-                "name": "Chiara Chiappini"
-            },
-            "articleBody": "Text",
-            "publisher": {
-                "@type": "Organization",
-                "name": "amp.dev",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://amp.dev/img/favicon.png",
-                    "width": "512",
-                    "height": "512"
-                }
-            },
-            "image": {
-                "@type": "ImageObject",
-                "url": "https://amp.dev/static/samples/img/landscape_lake_1280x857.jpg",
-                "width": "853",
-                "height": "1280"
-            }
-        } {
-            "@type": "BlogPosting",
-            "headline": "Forested hills",
-            "url": "https://amp.dev/documentation/examples/news-publishing/live_blog/#post4",
-            "datePublished": 1622636684741,
-            "author": {
-                "@type": "Person",
-                "sameAs": "https://github.com/kul3r4",
-                "name": "Chiara Chiappini"
-            },
-            "articleBody": "Text",
-            "publisher": {
-                "@type": "Organization",
-                "name": "amp.dev",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://amp.dev/img/favicon.png",
-                    "width": "512",
-                    "height": "512"
-                }
-            },
-            "image": {
-                "@type": "ImageObject",
-                "url": "https://amp.dev/static/samples/img/landscape_trees_1280x960.jpg",
-                "width": "853",
-                "height": "1280"
-            }
-        } {
-            "@type": "BlogPosting",
-            "headline": "Scattered houses",
-            "url": "https://amp.dev/documentation/examples/news-publishing/live_blog/#post5",
-            "datePublished": 1622636684741,
-            "author": {
-                "@type": "Person",
-                "sameAs": "https://github.com/kul3r4",
-                "name": "Chiara Chiappini"
-            },
-            "articleBody": "Text",
-            "publisher": {
-                "@type": "Organization",
-                "name": "amp.dev",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://amp.dev/img/favicon.png",
-                    "width": "512",
-                    "height": "512"
-                }
-            },
-            "image": {
-                "@type": "ImageObject",
-                "url": "https://amp.dev/static/samples/img/landscape_village_1280x853.jpg",
-                "width": "853",
-                "height": "1280"
-            }
-        } {
-            "@type": "BlogPosting",
-            "headline": "Canyon",
-            "url": "https://amp.dev/documentation/examples/news-publishing/live_blog/#post6",
-            "datePublished": 1622636684741,
-            "author": {
-                "@type": "Person",
-                "sameAs": "https://github.com/kul3r4",
-                "name": "Chiara Chiappini"
-            },
-            "articleBody": "Text",
-            "publisher": {
-                "@type": "Organization",
-                "name": "amp.dev",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://amp.dev/img/favicon.png",
-                    "width": "512",
-                    "height": "512"
-                }
-            },
-            "image": {
-                "@type": "ImageObject",
-                "url": "https://amp.dev/static/samples/img/landscape_canyon_1280x1700.jpg",
-                "width": "853",
-                "height": "1280"
-            }
-        } {
-            "@type": "BlogPosting",
-            "headline": "Desert",
-            "url": "https://amp.dev/documentation/examples/news-publishing/live_blog/#post7",
-            "datePublished": 1622636684741,
-            "author": {
-                "@type": "Person",
-                "sameAs": "https://github.com/kul3r4",
-                "name": "Chiara Chiappini"
-            },
-            "articleBody": "Text",
-            "publisher": {
-                "@type": "Organization",
-                "name": "amp.dev",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://amp.dev/img/favicon.png",
-                    "width": "512",
-                    "height": "512"
-                }
-            },
-            "image": {
-                "@type": "ImageObject",
-                "url": "https://amp.dev/static/samples/img/landscape_desert_1280x853.jpg",
-                "width": "853",
-                "height": "1280"
-            }
-        } {
-            "@type": "BlogPosting",
-            "headline": "Houses",
-            "url": "https://amp.dev/documentation/examples/news-publishing/live_blog/#post8",
-            "datePublished": 1622636684741,
-            "author": {
-                "@type": "Person",
-                "sameAs": "https://github.com/kul3r4",
-                "name": "Chiara Chiappini"
-            },
-            "articleBody": "Text",
-            "publisher": {
-                "@type": "Organization",
-                "name": "amp.dev",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://amp.dev/img/favicon.png",
-                    "width": "512",
-                    "height": "512"
-                }
-            },
-            "image": {
-                "@type": "ImageObject",
-                "url": "https://amp.dev/static/samples/img/landscape_houses_1280x803.jpg",
-                "width": "853",
-                "height": "1280"
-            }
-        } {
-            "@type": "BlogPosting",
-            "headline": "Blue sea",
-            "url": "https://amp.dev/documentation/examples/news-publishing/live_blog/#post9",
-            "datePublished": 1622636684741,
-            "author": {
-                "@type": "Person",
-                "sameAs": "https://github.com/kul3r4",
-                "name": "Chiara Chiappini"
-            },
-            "articleBody": "Text",
-            "publisher": {
-                "@type": "Organization",
-                "name": "amp.dev",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://amp.dev/img/favicon.png",
-                    "width": "512",
-                    "height": "512"
-                }
-            },
-            "image": {
-                "@type": "ImageObject",
-                "url": "https://amp.dev/static/samples/img/landscape_sea_1280x848.jpg",
-                "width": "853",
-                "height": "1280"
-            }
-        } {
-            "@type": "BlogPosting",
-            "headline": "Sailing ship",
-            "url": "https://amp.dev/documentation/examples/news-publishing/live_blog/#post10",
-            "datePublished": 1622636684741,
-            "author": {
-                "@type": "Person",
-                "sameAs": "https://github.com/kul3r4",
-                "name": "Chiara Chiappini"
-            },
-            "articleBody": "Text",
-            "publisher": {
-                "@type": "Organization",
-                "name": "amp.dev",
-                "logo": {
-                    "@type": "ImageObject",
-                    "url": "https://amp.dev/img/favicon.png",
-                    "width": "512",
-                    "height": "512"
-                }
-            },
-            "image": {
-                "@type": "ImageObject",
-                "url": "https://amp.dev/static/samples/img/landscape_ship_1280x853.jpg",
-                "width": "853",
-                "height": "1280"
-            }
-        }
-        "
         }
     </script>
 </body>
