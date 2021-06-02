@@ -2248,16 +2248,19 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
                     </div>
                 </amp-carousel>
-
+                <div class="rcx12">
+                    <amp-facebook-comments width="486" height="657" layout="responsive" data-numposts="5" data-href="detalle-blog.html">
+                    </amp-facebook-comments>
+                </div>
             </div>
-            <div class="rcx12 rcm12 rcl4" style="position: sticky;top: 70px;">
+            <div class="rcx12 rcm12 rcl4" style="position: sticky;top: 70px">
                 <div class="rcx12 rcm12">
                     <sub>Compartir</sub><br>
                     <amp-social-share class="rounded" aria-label="Share on Facebook" type="facebook" data-param-app_id="254325784911610" width="48" height="48"></amp-social-share>
                     <amp-social-share class="rounded" aria-label="Share on Twitter" type="twitter" width="48" height="48"></amp-social-share>
                     <amp-social-share class="rounded" aria-label="Share on WhatsApp" type="whatsapp" width="48" height="48"></amp-social-share>
                 </div>
-                <div class="rcx12">
+                <div class="rcx12" style="overflow-y: auto;max-height: calc(100vh - 160px)">
                     <amp-instagram data-shortcode="CPWTStJnNZN" data-captioned width="400" height="400" layout="responsive">
                     </amp-instagram>
                 </div>
@@ -2351,6 +2354,8 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
     -->
     <script async custom-element="amp-social-share" src="https://cdn.ampproject.org/v0/amp-social-share-0.1.js"></script>
     <script async custom-element="amp-instagram" src="https://cdn.ampproject.org/v0/amp-instagram-0.1.js"></script>
+    <script async custom-element="amp-facebook-comments" src="https://cdn.ampproject.org/v0/amp-facebook-comments-0.1.js"></script>
+
     <script amp-script>
         var nystories = document.querySelectorAll("main")[0];
         var navMenu = document.querySelectorAll(".menu-header")[0];
