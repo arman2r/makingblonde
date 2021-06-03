@@ -2148,6 +2148,14 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             border-top-left-radius: 20px;
             border-top-right-radius: 20px;
         }
+        
+        .search-error {
+            position: absolute;
+            bottom: -10px;
+            left: 80px;
+            font-size: .8rem;
+            color: #a06a78;
+        }
     </style>
 
 </head>
@@ -2280,6 +2288,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 </div>
                 <button class="btn search" on="tap:search.toggleClass(class='maxwidth')"><span><i class="fas fa-search"></i><i class="fas fa-times"></i></span></button>
                 <button class="btn" on="tap:category.toggleClass(class='opencategories')"><span><i class="fas fa-sort-amount-down"></i></span></button>
+                <span class="search-error" style="display: none;">No se econtraron resultados</span>
             </div>
         </nav>
         <div id="category" class="categories">
@@ -2581,6 +2590,11 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
         function buscarNota() {
 
+            var allbtns = document.querySelectorAll('.btn-categoria');
+            allbtns.forEach(btn => {
+                btn.classList.remove('active-btn')
+            })
+
             document.getElementById('category').classList.remove('opencategories')
 
             var allItems = document.querySelectorAll('.item-blog')
@@ -2589,14 +2603,24 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 bodyBlog.removeChild(item)
             })
 
-
             var inptSearch = document.getElementById('search-ipt');
-
+            var msgErr = document.querySelector('.search-error');
             var titulo = inptSearch.value.toLocaleLowerCase();
-            if (titulo !== undefined) {
+            if (titulo !== '' && titulo !== undefined) {
                 var newDataBlog = dataBlog.filter(x => x.titulo.toLocaleLowerCase().includes(titulo));
+                if (newDataBlog.length == 0) {
+                    var newDataBlog = dataBlog;
+                    inptSearch.setAttribute('style', 'border:1px solid #C6818F')
+                    msgErr.removeAttribute('style')
+                } else {
+                    inptSearch.removeAttribute('style')
+                    msgErr.setAttribute('style', 'display:none')
+                }
             } else {
-                var newDataBlog = dataBlog
+                var newDataBlog = dataBlog;
+                document.getElementById('search').classList.remove('maxwidth');
+                msgErr.setAttribute('style', 'display:none');
+                inptSearch.removeAttribute('style')
             }
             //console.log(newDataBlog)
 
