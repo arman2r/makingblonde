@@ -2283,7 +2283,7 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
             <div class="blog-search">
                 <div class="contnt-search">
-                    <input id="search-ipt" type="text" placeholder="Buscar...">
+                    <input id="search-ipt" type="text" placeholder="Buscar..." onkeydown="event.key=='Enter' ? buscarNota():''">
                     <button class="btn" onclick="buscarNota()"><span><i class="fas fa-search"></i></span></button>
                 </div>
                 <button class="btn search" on="tap:search.toggleClass(class='maxwidth')"><span><i class="fas fa-search"></i><i class="fas fa-times"></i></span></button>
