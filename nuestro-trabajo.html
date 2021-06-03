@@ -1527,9 +1527,15 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 flex-flow: column nowrap;
                 align-items: center;
                 text-align: center;
+                padding-left: 5px !important;
+                padding-right: 5px !important;
+                box-sizing: border-box !important;
             }
             .item-center amp-img {
                 margin: 0px 0 20px
+            }
+            .item-center span {
+                font-size: .78rem !important;
             }
         }
         
@@ -1552,6 +1558,24 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         
         .info-footer {
             padding: 40px 0 60px
+        }
+        
+        @media(max-width:899px) {
+            .info-footer {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+            }
+        }
+        
+        @media(max-width:349px) {
+            .info-footer {
+                display: flex;
+                flex-flow: column;
+            }
+            .item-center {
+                width: 100% !important;
+            }
         }
         
         .menu-footer li {

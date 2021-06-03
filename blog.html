@@ -1528,9 +1528,15 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
                 flex-flow: column nowrap;
                 align-items: center;
                 text-align: center;
+                padding-left: 5px !important;
+                padding-right: 5px !important;
+                box-sizing: border-box !important;
             }
             .item-center amp-img {
                 margin: 0px 0 20px
+            }
+            .item-center span {
+                font-size: .78rem !important;
             }
         }
         
@@ -1553,6 +1559,24 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
         
         .info-footer {
             padding: 40px 0 60px
+        }
+        
+        @media(max-width:899px) {
+            .info-footer {
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+            }
+        }
+        
+        @media(max-width:349px) {
+            .info-footer {
+                display: flex;
+                flex-flow: column;
+            }
+            .item-center {
+                width: 100% !important;
+            }
         }
         
         .menu-footer li {
@@ -2269,81 +2293,98 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
             }
         }
 
-
-
         var dataBlog = [{
             titulo: 'Nuestra apertura 1',
             subtitulo: 'Un espacio dedicado para tu cuidado',
+            category: 'categoria 1',
             descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quo ducimus quibusdam explicabo delectus doloremque repellendus quam enim fugiat, assumenda veniam provident incidunt quis debitis rem. Atque exercitationem placeat molestiae? Lorem ipsum dolor sit, amet consectetur adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? ipsum dolor sit, amet consectetur adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? Lorem ipsum dolor sit amet consectetur adipisicing elit.Temporibus, minima saepe ullam tempora omnis molestiae quidem id vel tempore quibusdam ducimus repudiandae commodi.Quidem odio vel error beatae assumenda doloribus.',
             imagenes: ['img/banner3.jpg', 'img/color/making-blonde-cliente-diana.jpg', 'img/color/making-blonde-cliente-diana-avendano.jpg', 'img/color/making-blonde-cliente-erika.jpg', 'img/color/making-blonde-cliente-geraldin-navas.jpg', 'img/color/making-blonde-cliente-gina.jpg'],
             url: 'detalle-blog.html'
         }, {
             titulo: 'Nuestra apertura 2',
             subtitulo: 'Un espacio dedicado para tu cuidado',
+            category: 'categoria 2',
             descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quo ducimus quibusdam explicabo delectus doloremque repellendus quam enim fugiat, assumenda veniam provident incidunt quis debitis rem. Atque exercitationem placeat molestiae? Lorem ipsum dolor sit, amet consectetur adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? ipsum dolor sit, amet consectetur adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? Lorem ipsum dolor sit amet consectetur adipisicing elit.Temporibus, minima saepe ullam tempora omnis molestiae quidem id vel tempore quibusdam ducimus repudiandae commodi.Quidem odio vel error beatae assumenda doloribus.',
             imagenes: ['img/banner3.jpg', 'img/color/making-blonde-cliente-diana.jpg', 'img/color/making-blonde-cliente-diana-avendano.jpg', 'img/color/making-blonde-cliente-erika.jpg', 'img/color/making-blonde-cliente-geraldin-navas.jpg', 'img/color/making-blonde-cliente-gina.jpg'],
             url: 'detalle-blog.html'
         }, {
             titulo: 'Nuestra apertura 3',
             subtitulo: 'Un espacio dedicado para tu cuidado',
+            category: 'categoria 3',
             descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quo ducimus quibusdam explicabo delectus doloremque repellendus quam enim fugiat, assumenda veniam provident incidunt quis debitis rem. Atque exercitationem placeat molestiae? Lorem ipsum dolor sit, amet consectetur adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? ipsum dolor sit, amet consectetur adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? Lorem ipsum dolor sit amet consectetur adipisicing elit.Temporibus, minima saepe ullam tempora omnis molestiae quidem id vel tempore quibusdam ducimus repudiandae commodi.Quidem odio vel error beatae assumenda doloribus.',
             imagenes: ['img/banner3.jpg', 'img/color/making-blonde-cliente-diana.jpg', 'img/color/making-blonde-cliente-diana-avendano.jpg', 'img/color/making-blonde-cliente-erika.jpg', 'img/color/making-blonde-cliente-geraldin-navas.jpg', 'img/color/making-blonde-cliente-gina.jpg'],
             url: 'detalle-blog.html'
         }, {
             titulo: 'Nuestra apertura 4',
             subtitulo: 'Un espacio dedicado para tu cuidado',
+            category: 'categoria 4',
             descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quo ducimus quibusdam explicabo delectus doloremque repellendus quam enim fugiat, assumenda veniam provident incidunt quis debitis rem. Atque exercitationem placeat molestiae? Lorem ipsum dolor sit, amet consectetur adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? ipsum dolor sit, amet consectetur adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? Lorem ipsum dolor sit amet consectetur adipisicing elit.Temporibus, minima saepe ullam tempora omnis molestiae quidem id vel tempore quibusdam ducimus repudiandae commodi.Quidem odio vel error beatae assumenda doloribus.',
             imagenes: ['img/banner3.jpg', 'img/color/making-blonde-cliente-diana.jpg', 'img/color/making-blonde-cliente-diana-avendano.jpg', 'img/color/making-blonde-cliente-erika.jpg', 'img/color/making-blonde-cliente-geraldin-navas.jpg', 'img/color/making-blonde-cliente-gina.jpg'],
             url: 'detalle-blog.html'
         }, {
             titulo: 'Nuestra apertura 5',
             subtitulo: 'Un espacio dedicado para tu cuidado',
+            category: 'categoria 5',
             descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quo ducimus quibusdam explicabo delectus doloremque repellendus quam enim fugiat, assumenda veniam provident incidunt quis debitis rem. Atque exercitationem placeat molestiae? Lorem ipsum dolor sit, amet consectetur adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? ipsum dolor sit, amet consectetur adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? Lorem ipsum dolor sit amet consectetur adipisicing elit.Temporibus, minima saepe ullam tempora omnis molestiae quidem id vel tempore quibusdam ducimus repudiandae commodi.Quidem odio vel error beatae assumenda doloribus.',
             imagenes: ['img/banner3.jpg', 'img/color/making-blonde-cliente-diana.jpg', 'img/color/making-blonde-cliente-diana-avendano.jpg', 'img/color/making-blonde-cliente-erika.jpg', 'img/color/making-blonde-cliente-geraldin-navas.jpg', 'img/color/making-blonde-cliente-gina.jpg'],
             url: 'detalle-blog.html'
         }, {
             titulo: 'Nuestra apertura 6',
             subtitulo: 'Un espacio dedicado para tu cuidado',
+            category: 'categoria 6',
             descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quo ducimus quibusdam explicabo delectus doloremque repellendus quam enim fugiat, assumenda veniam provident incidunt quis debitis rem. Atque exercitationem placeat molestiae? Lorem ipsum dolor sit, amet consectetur adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? ipsum dolor sit, amet consectetur adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? Lorem ipsum dolor sit amet consectetur adipisicing elit.Temporibus, minima saepe ullam tempora omnis molestiae quidem id vel tempore quibusdam ducimus repudiandae commodi.Quidem odio vel error beatae assumenda doloribus.',
             imagenes: ['img/banner3.jpg', 'img/color/making-blonde-cliente-diana.jpg', 'img/color/making-blonde-cliente-diana-avendano.jpg', 'img/color/making-blonde-cliente-erika.jpg', 'img/color/making-blonde-cliente-geraldin-navas.jpg', 'img/color/making-blonde-cliente-gina.jpg'],
             url: 'detalle-blog.html'
         }, {
             titulo: 'Nuestra apertura 7',
             subtitulo: 'Un espacio dedicado para tu cuidado',
+            category: 'categoria 7',
             descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quo ducimus quibusdam explicabo delectus doloremque repellendus quam enim fugiat, assumenda veniam provident incidunt quis debitis rem. Atque exercitationem placeat molestiae? Lorem ipsum dolor sit, amet consectetur adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? ipsum dolor sit, amet consectetur adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? Lorem ipsum dolor sit amet consectetur adipisicing elit.Temporibus, minima saepe ullam tempora omnis molestiae quidem id vel tempore quibusdam ducimus repudiandae commodi.Quidem odio vel error beatae assumenda doloribus.',
             imagenes: ['img/banner3.jpg', 'img/color/making-blonde-cliente-diana.jpg', 'img/color/making-blonde-cliente-diana-avendano.jpg', 'img/color/making-blonde-cliente-erika.jpg', 'img/color/making-blonde-cliente-geraldin-navas.jpg', 'img/color/making-blonde-cliente-gina.jpg'],
             url: 'detalle-blog.html'
         }, {
             titulo: 'Nuestra apertura 8',
             subtitulo: 'Un espacio dedicado para tu cuidado',
+            category: 'categoria 8',
             descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quo ducimus quibusdam explicabo delectus doloremque repellendus quam enim fugiat, assumenda veniam provident incidunt quis debitis rem. Atque exercitationem placeat molestiae? Lorem ipsum dolor sit, amet consectetur adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? ipsum dolor sit, amet consectetur adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? Lorem ipsum dolor sit amet consectetur adipisicing elit.Temporibus, minima saepe ullam tempora omnis molestiae quidem id vel tempore quibusdam ducimus repudiandae commodi.Quidem odio vel error beatae assumenda doloribus.',
             imagenes: ['img/banner3.jpg', 'img/color/making-blonde-cliente-diana.jpg', 'img/color/making-blonde-cliente-diana-avendano.jpg', 'img/color/making-blonde-cliente-erika.jpg', 'img/color/making-blonde-cliente-geraldin-navas.jpg', 'img/color/making-blonde-cliente-gina.jpg'],
             url: 'detalle-blog.html'
         }, {
             titulo: 'Nuestra apertura 9',
             subtitulo: 'Un espacio dedicado para tu cuidado',
+            category: 'categoria 9',
             descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quo ducimus quibusdam explicabo delectus doloremque repellendus quam enim fugiat, assumenda veniam provident incidunt quis debitis rem. Atque exercitationem placeat molestiae? Lorem ipsum dolor sit, amet consectetur adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? ipsum dolor sit, amet consectetur adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? Lorem ipsum dolor sit amet consectetur adipisicing elit.Temporibus, minima saepe ullam tempora omnis molestiae quidem id vel tempore quibusdam ducimus repudiandae commodi.Quidem odio vel error beatae assumenda doloribus.',
             imagenes: ['img/banner3.jpg', 'img/color/making-blonde-cliente-diana.jpg', 'img/color/making-blonde-cliente-diana-avendano.jpg', 'img/color/making-blonde-cliente-erika.jpg', 'img/color/making-blonde-cliente-geraldin-navas.jpg', 'img/color/making-blonde-cliente-gina.jpg'],
             url: 'detalle-blog.html'
         }, {
             titulo: 'Nuestra apertura 10',
             subtitulo: 'Un espacio dedicado para tu cuidado',
+            category: 'categoria 10',
             descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quo ducimus quibusdam explicabo delectus doloremque repellendus quam enim fugiat, assumenda veniam provident incidunt quis debitis rem. Atque exercitationem placeat molestiae? Lorem ipsum dolor sit, amet consectetur adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? ipsum dolor sit, amet consectetur adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? Lorem ipsum dolor sit amet consectetur adipisicing elit.Temporibus, minima saepe ullam tempora omnis molestiae quidem id vel tempore quibusdam ducimus repudiandae commodi.Quidem odio vel error beatae assumenda doloribus.',
             imagenes: ['img/banner3.jpg', 'img/color/making-blonde-cliente-diana.jpg', 'img/color/making-blonde-cliente-diana-avendano.jpg', 'img/color/making-blonde-cliente-erika.jpg', 'img/color/making-blonde-cliente-geraldin-navas.jpg', 'img/color/making-blonde-cliente-gina.jpg'],
             url: 'detalle-blog.html'
         }, {
             titulo: 'Nuestra apertura 11',
             subtitulo: 'Un espacio dedicado para tu cuidado',
+            category: 'categoria 11',
             descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quo ducimus quibusdam explicabo delectus doloremque repellendus quam enim fugiat, assumenda veniam provident incidunt quis debitis rem. Atque exercitationem placeat molestiae? Lorem ipsum dolor sit, amet consectetur adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? ipsum dolor sit, amet consectetur adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? Lorem ipsum dolor sit amet consectetur adipisicing elit.Temporibus, minima saepe ullam tempora omnis molestiae quidem id vel tempore quibusdam ducimus repudiandae commodi.Quidem odio vel error beatae assumenda doloribus.',
             imagenes: ['img/banner3.jpg', 'img/color/making-blonde-cliente-diana.jpg', 'img/color/making-blonde-cliente-diana-avendano.jpg', 'img/color/making-blonde-cliente-erika.jpg', 'img/color/making-blonde-cliente-geraldin-navas.jpg', 'img/color/making-blonde-cliente-gina.jpg'],
             url: 'detalle-blog.html'
         }, {
             titulo: 'Nuestra apertura 12',
             subtitulo: 'Un espacio dedicado para tu cuidado',
+            category: 'categoria 12',
             descripcion: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt quo ducimus quibusdam explicabo delectus doloremque repellendus quam enim fugiat, assumenda veniam provident incidunt quis debitis rem. Atque exercitationem placeat molestiae? Lorem ipsum dolor sit, amet consectetur adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? ipsum dolor sit, amet consectetur adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? adipisicing elit.Magni sit vero enim cumque ipsa officia esse, iusto nisi iure inventore corporis quibusdam ? Sapiente impedit, ipsa eos voluptates maiores laboriosam ab ? Lorem ipsum dolor sit amet consectetur adipisicing elit.Temporibus, minima saepe ullam tempora omnis molestiae quidem id vel tempore quibusdam ducimus repudiandae commodi.Quidem odio vel error beatae assumenda doloribus.',
             imagenes: ['img/banner3.jpg', 'img/color/making-blonde-cliente-diana.jpg', 'img/color/making-blonde-cliente-diana-avendano.jpg', 'img/color/making-blonde-cliente-erika.jpg', 'img/color/making-blonde-cliente-geraldin-navas.jpg', 'img/color/making-blonde-cliente-gina.jpg'],
             url: 'detalle-blog.html'
         }]
+
+
+        var categorias = []
+
+        dataBlog.forEach(blogCtry => {
+            categorias.push(blogCtry.category)
+        })
 
         var bodyBlog = document.getElementById('data-blog');
 
